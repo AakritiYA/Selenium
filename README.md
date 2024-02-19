@@ -2,25 +2,57 @@
 
 This repository documents my exploration of different locators for finding web elements during my Selenium learning journey. The examples cover various aspects of web application testing, focusing on effective and efficient ways to locate and interact with different types of web elements.
 
-## Learning Highlights
+# Additional Learning Highlights
 
-- Understanding and using various Selenium locators.
-- Examples of locating different types of web elements.
+- Dropdown handling with `Select` class
+- Counting and printing hyperlinks on a webpage
+- Finding and handling broken links
+- Counting radio buttons using XPath
+- Clicking on image links
+- Mouse operations: right-click and double-click
+- Handling alert popups
+- Addressing synchronization issues
+- Working with frames and iframes
+- Scrolling web pages
 
-## Topics Covered
+## Basic Locators
 
-- Basic locators: ID, Name, Class Name
-- XPath and CSS Selectors
-- Link Text and Partial Link Text
+- **By ID:** `driver.findElement(By.id("elementId"));`
+- **By Name:** `driver.findElement(By.name("elementName"));`
+- **By Class Name:** `driver.findElement(By.className("className"));`
+- **By Tag Name:** `driver.findElement(By.tagName("tagName"));`
+- **By Link Text:** `driver.findElement(By.linkText("linkText"));`
+- **By Partial Link Text:** `driver.findElement(By.partialLinkText("partialLinkText"));`
+
+## CSS Selectors
+
+- **By Tag and ID:** `driver.findElement(By.cssSelector("tag#id"));`
+- **By Tag and Class:** `driver.findElement(By.cssSelector("tag.className"));`
+- **By Tag and Attribute:** `driver.findElement(By.cssSelector("tag[attribute='value']"));`
+- **By Tag, Class, and Attribute:** `driver.findElement(By.cssSelector("tag.className[attribute='value']"));`
+
+## XPath
+
+- **Absolute XPath:** `/html/body/div[1]/div[2]/...`;
+- **Relative XPath:** `//*[@id='elementId']`; *(Preferable over Absolute XPath)*
+- **Single Attribute:** `//*[@attribute='value']`;
+- **Multiple Attributes:** `//*[@attribute1='value1' and @attribute2='value2']`;
+
+## XPath with SelectorHub
+
+When using SelectorHub, you can generate enhanced XPaths for more complex scenarios:
+
+- *Install SelectorHub browser extension.*
+- *Navigate to the web page.*
+- *Inspect the element.*
+- *Use SelectorHub to generate XPath.*
 
 ## Locators Usage Examples
 
 Explore the examples to understand how to use each locator for finding web elements:
 
-- [Basic Locators](Examples/BasicLocators.md)
-- [XPath and CSS Selectors](Examples/XPathAndCSS.md)
-- [Link Text and Partial Link Text](Examples/LinkText.md)
-- [Tag Name and Accessibility Locators](Examples/TagNameAndAccessibility.md)
+- [Locators]([Examples/BasicLocators.md](https://www.selenium.dev/documentation/webdriver/elements/locators/))
+- [Selenium Tutorial - WebDriver Basics](https://toolsqa.com/selenium-webdriver/selenium-tutorial/)
 
 ## Getting Started
 
